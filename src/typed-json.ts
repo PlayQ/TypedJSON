@@ -1297,7 +1297,7 @@ var TypedJSON: TypedJSON = {
     config: function (settings: SerializerSettings) {
         configSettings = Helpers.merge(configSettings, settings);
     },
-    stringify: function (value: any, settings?: SerializerSettings): string {
+    stringify: function (value: any, settings?: any): string {
         return Serializer.writeObject(value, Helpers.merge(configSettings, settings || {}));
     },
     parse: function (json: string, type?: any, settings?: SerializerSettings): any {
